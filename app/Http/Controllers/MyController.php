@@ -38,4 +38,12 @@ class MyController extends Controller
         }
         return view('Open',['sum' => $NewsRequest->Summary,'short' => $sh,'art' => $ar]);
     }
+    function deleteView()
+    {
+        return view('delete');
+    }
+    function delete(NewsRequest $NewsRequest)
+    {
+        return DB::table('News')->where('Summary', '=', $NewsRequest->Summary)->delete();
+    }
 }
