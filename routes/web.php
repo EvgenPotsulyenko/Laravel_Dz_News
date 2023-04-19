@@ -22,3 +22,5 @@ Route::get('/', [MyController::class, 'index']);
 Route::get('/add', [MyController::class, 'create_news']);
 Route::get('/crt', [MyController::class, 'create']);
 Route::get('/open/{Summary}', [MyController::class, 'open']);
+Route::get('/delView', [MyController::class, 'deleteView']);
+Route::get('/del', [MyController::class, 'delete']);
